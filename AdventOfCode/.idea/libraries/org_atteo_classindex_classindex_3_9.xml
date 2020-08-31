@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.atteo.classindex:classindex:3.9" type="repository">
+    <properties maven-id="org.atteo.classindex:classindex:3.9" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/atteo/classindex/classindex/3.9/classindex-3.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
