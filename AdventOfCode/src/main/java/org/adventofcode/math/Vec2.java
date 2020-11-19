@@ -52,6 +52,32 @@ public class Vec2 {
         return this;
     }
 
+    public Vec2 sub (Vec2 other) {
+        x -= other.x;
+        y -= other.y;
+        return this;
+    }
+
+    public Vec2 mul (float scalar) {
+        x *= scalar;
+        y *= scalar;
+        return this;
+    }
+
+    public Vec2 div (float scalar) {
+        x /= scalar;
+        y /= scalar;
+        return this;
+    }
+
+    public float dot (Vec2 other) {
+        return x * other.x + y * other.y;
+    }
+
+    public float cross (Vec2 other) {
+        return this.x * other.getY() - this.y * other.getX();
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Vec2) {
@@ -61,5 +87,13 @@ public class Vec2 {
         else {
             return false;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Vec2{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }
