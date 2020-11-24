@@ -8,6 +8,8 @@ import org.adventofcode.templates.Assignment;
 import org.adventofcode.templates.CalenderAssignment;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Scanner;
 
 @CalenderAssignment(calendarName = "2015", assignmentName = "Santa in elevator", number = 1, description = "Santa starts on floor 0.\nOpen parenthesis = +1\nClosing parenthesis = -1\nWhat floor does santa end on?")
 public class A1P1 extends Assignment {
@@ -23,7 +25,9 @@ public class A1P1 extends Assignment {
 
     @Override
     public Node getContent() throws IOException {
-        return loadDefaultContent(this);
+        Node content = loadDefaultContent(this);
+        setInputContent(input, 1);
+        return content;
     }
 
     @FXML
@@ -31,7 +35,7 @@ public class A1P1 extends Assignment {
         int open = 0;
         int close = 0;
 
-        for (char c : input.getText().toCharArray()) {
+        for (char c : this.input.getText().toCharArray()) {
             if (c == '(') {
                 open++;
             }
@@ -40,6 +44,6 @@ public class A1P1 extends Assignment {
             }
         }
 
-        output.setText("Open: " + open + "\nClose: " + close + "\nEnd floor: " + (open-close));
+        this.output.setText("Open: " + open + "\nClose: " + close + "\nEnd floor: " + (open-close));
     }
 }
