@@ -9,46 +9,46 @@ import org.adventofcode.templates.CalenderAssignment;
 
 import java.io.IOException;
 
-@CalenderAssignment(calendarName = "2015", assignmentName = "Santa in elevator: basement", number = 2, description = "Santa starts on floor 0.\nOpen parenthesis = +1\nClosing parenthesis = -1\nAt what index does he enter the basement?")
+@CalenderAssignment(calendarName = "2015", assignmentName = "Santa Entering Basement Floor", number = 2, description = "Santa starts on floor 0.\nOpen parenthesis = +1\nClosing parenthesis = -1\nWhen does santa enter the basement floor?")
 public class A1P2 extends Assignment {
 
-    @FXML
-    private TextArea input;
-    @FXML
-    private TextArea output;
+	@FXML
+	private TextArea input;
+	@FXML
+	private TextArea output;
 
-    public A1P2(String name) {
-        super(name);
-    }
+	public A1P2(String name) {
+		super(name);
+	}
 
-    @Override
-    public Node getContent() throws IOException {
-        return loadDefaultContent(this);
-    }
+	@Override
+	public Node getContent() throws IOException {
+		Node content = loadDefaultContent(this);
+		setInputContent(input, 1);
+		return content;
+	}
 
-    @FXML
-    public void run(ActionEvent event) {
-        int open = 0;
-        int close = 0;
+	@FXML
+	public void run(ActionEvent event) {
+		int open = 0;
+		int close = 0;
+		int index = 0;
+		int savedIndex = -1;
 
-        int index = -1;
+		for (char c : input.getText().toCharArray()) {
+			if (c == '(') {
+				open++;
+			}
+			else {
+				close++;
+			}
+			index++;
 
-        char[] inputs = input.getText().toCharArray();
+			if (open-close == -1 && savedIndex == -1) {
+				savedIndex = index;
+			}
+		}
 
-        for (int i = 0; i < inputs.length; i++) {
-            if (inputs[i] == '(') {
-                open++;
-            }
-            else {
-                close++;
-            }
-
-            if (open - close == -1) {
-                index = i+1;
-                break;
-            }
-        }
-
-        output.setText("Basement index: " + index);
-    }
+		output.setText("Open: " + open + "\nClose: " + close + "\nEnd floor: " + (open-close) + "\nIndex basement floor entered: " + savedIndex);
+	}
 }
