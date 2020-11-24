@@ -18,8 +18,7 @@ public class PrimaryController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             rootPane.getTabs().addAll(
-                    new Calendar("2015"),
-                    new Calendar("2016")
+                    new Calendar("2015")
             );
         } catch (IOException e) {
             e.printStackTrace();
