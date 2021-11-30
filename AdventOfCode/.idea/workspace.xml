@@ -1,28 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab29d850-b8e7-4e8a-8b50-815149b2415c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/AdventOfCode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A1P1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A1P2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A2P1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A2P2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A3P1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A3P2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A4P1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A4P2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A5P1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A5P2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A6P1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A6P2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/math/Line.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/utils/ConstrainedGrid.java" afterDir="false" />
+    <list default="true" id="ab29d850-b8e7-4e8a-8b50-815149b2415c" name="Default Changelist" comment="Used new method, to load input content.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/2015/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/2015/2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/math/Vec2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/math/Vec2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A10P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A10P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A11P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A11P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A12P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A1P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A1P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A1P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A1P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A2P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A2P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A2P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A2P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A3P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A3P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A3P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A3P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A4P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A4P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A4P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A4P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A5P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A5P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A5P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A5P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A6P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A6P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A6P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A6P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A7P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A7P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A7P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A7P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A8P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A9P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A9P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A1P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A1P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A2P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A2P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A3P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A3P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A4P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A4P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A5P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A5P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A6P1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A6P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/graph/Edge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/graph/Graph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/graph/GraphAlgorithms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/graph/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/graph/ValueObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/logiccircuit/AndGate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/logiccircuit/LShiftGate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/logiccircuit/LogicCircuit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/logiccircuit/LogicGate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/logiccircuit/NotGate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/logiccircuit/NumberGate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/logiccircuit/OrGate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/logiccircuit/RShiftGate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/math/Line.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/math/Vec2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/templates/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/templates/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/utils/ArrayUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/utils/ConstrainedGrid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/utils/ListUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/utils/StringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +85,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="vmOptionsForImporter" value="-Xmx768m" />
@@ -54,7 +100,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -62,28 +107,35 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3873563" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.adventofcode.cal2016" />
-      <recent name="org.adventofcode.cal2015" />
-      <recent name="org.adventofcode.logiccircuit" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Files\Java projects\AdventOfCodeGUI\AdventOfCode\src\main\java\org\adventofcode\cal2016" />
       <recent name="D:\Files\Java projects\AdventOfCode\src\main\resources\org\adventofcode" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\magnu\code\java\AOC\AdventOfCode\input\2015" />
+      <recent name="C:\Users\magnu\code\java\AOC\AdventOfCode\input\2020" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.adventofcode.cal2021" />
+      <recent name="org.adventofcode.cal2020" />
+      <recent name="org.adventofcode.cal2015" />
+      <recent name="org.adventofcode.cal2016" />
+      <recent name="org.adventofcode.logiccircuit" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.adventofcode.App" />
       <module name="AdventOfCode" />
@@ -91,7 +143,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test Util" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.adventofcode.utils.TestUtils" />
+      <module name="AdventOfCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.Test Util" />
+    </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -111,36 +175,94 @@
       <workItem from="1589876232068" duration="30935000" />
       <workItem from="1589999123065" duration="22977000" />
       <workItem from="1605707216468" duration="25557000" />
+      <workItem from="1605876684092" duration="13586000" />
+      <workItem from="1606202641842" duration="15314000" />
+      <workItem from="1606259765607" duration="258000" />
+      <workItem from="1606408406354" duration="6262000" />
+      <workItem from="1606799928876" duration="7681000" />
+      <workItem from="1606855358782" duration="612000" />
+      <workItem from="1606892698526" duration="1394000" />
+      <workItem from="1606922201660" duration="100000" />
+      <workItem from="1606948499271" duration="633000" />
+      <workItem from="1606992379732" duration="5784000" />
+      <workItem from="1607068054841" duration="9066000" />
+      <workItem from="1607224972185" duration="4336000" />
+      <workItem from="1607371759203" duration="4221000" />
+      <workItem from="1607461373429" duration="18000" />
+      <workItem from="1607498262636" duration="2253000" />
+      <workItem from="1607586210083" duration="636000" />
+      <workItem from="1607625732528" duration="309000" />
+      <workItem from="1607802262267" duration="2715000" />
+      <workItem from="1638301723223" duration="452000" />
     </task>
+    <task id="LOCAL-00001" summary="Added method, to load file input into the input field.">
+      <created>1606204779037</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606204779037</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Removed Calender 2016">
+      <created>1606204791636</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606204791636</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Used new method, to load input content.">
+      <created>1606204858846</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606204858846</updated>
+    </task>
+    <task id="LOCAL-00004" summary="A1P2 done.">
+      <created>1606204872268</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606204872268</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added input files for A1 and A2">
+      <created>1606204924972</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606204924972</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="765" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1605774162062">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605774162062" />
-    <state width="1876" height="208" key="GridCell.Tab.0.bottom" timestamp="1605794483705">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605794483705" />
-    <state width="1876" height="208" key="GridCell.Tab.0.center" timestamp="1605794483705">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605794483705" />
-    <state width="1876" height="208" key="GridCell.Tab.0.left" timestamp="1605794483705">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605794483705" />
-    <state width="1876" height="208" key="GridCell.Tab.0.right" timestamp="1605794483705">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605794483705" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605787417565">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605787417565" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added method, to load file input into the input field." />
+    <MESSAGE value="Removed Calender 2016" />
+    <MESSAGE value="Used new method, to load input content." />
+    <MESSAGE value="A1P2 done." />
+    <MESSAGE value="Added input files for A1 and A2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added input files for A1 and A2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="decrementor == 0" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A7P1.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/adventofcode/cal2020/A4P2.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="17" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -8,43 +8,49 @@ import org.adventofcode.templates.Assignment;
 import org.adventofcode.templates.CalenderAssignment;
 
 import java.io.IOException;
+import java.util.Arrays;
 
-@CalenderAssignment(calendarName = "2015", assignmentName = "Wrapping presents: Ribbon", number = 4, description = "Get list of boxes(format=LxWxH)\nRibbon for box is: perimeter of smallest face + volume for bow\nHow much ribbon is needed to wrap all the boxes?")
+@CalenderAssignment(calendarName = "2015", assignmentName = "Total length of ribbon", number = 4, description = "Calculate how much ribbon, the elves need to order.")
 public class A2P2 extends Assignment {
 
-    @FXML
-    private TextArea input;
-    @FXML
-    private TextArea output;
+	@FXML
+	private TextArea input;
+	@FXML
+	private TextArea output;
 
-    public A2P2(String name) {
-        super(name);
-    }
+	public A2P2(String name) {
+		super(name);
+	}
 
-    @Override
-    public Node getContent() throws IOException {
-        return loadDefaultContent(this);
-    }
+	@Override
+	public Node getContent() throws IOException {
+		Node content = loadDefaultContent(this);
+		setInputContent(input, 2015, 2);
+		return content;
+	}
 
-    @FXML
-    public void run(ActionEvent event) {
+	@FXML
+	public void run(ActionEvent event) {
+		int totalAmountOfRibbon = 0;
 
-        int totalRibbon = 0;
+		for (String line : input.getText().split("\n")) {
 
-        String[] boxes = input.getText().split("\n");
-        int numBoxes = boxes.length;
+			String[] dimensions = line.split("x");
+			int length = Integer.parseInt(dimensions[0]);
+			int width = Integer.parseInt(dimensions[1]);
+			int height = Integer.parseInt(dimensions[2]);
 
-        for (String box : boxes) {
-            String[] dimensions = box.split("x");
-            int l = Integer.parseInt(dimensions[0]);
-            int w = Integer.parseInt(dimensions[1]);
-            int h = Integer.parseInt(dimensions[2]);
-            int lw = l + l + w + w;
-            int lh = l + l + h + h;
-            int wh = w + w + h + h;
-            totalRibbon += Math.min(lw, Math.min(lh, wh)) + (l * w * h);
-        }
+			int[] sizes = new int[] {length, width, height};
 
-        output.setText("Number of boxes: " + numBoxes + "\nTotal ribbon needed: " + totalRibbon);
-    }
+			Arrays.sort(sizes);
+
+			int perimeter = 2 * sizes[0] + 2 * sizes[1];
+
+			int amountOfRibbon = perimeter + length * width * height;
+
+			totalAmountOfRibbon += amountOfRibbon;
+		}
+
+		output.setText("The elves need a total feet of " + totalAmountOfRibbon + " to wrap all presents.");
+	}
 }

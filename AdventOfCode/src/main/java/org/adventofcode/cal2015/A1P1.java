@@ -26,7 +26,7 @@ public class A1P1 extends Assignment {
     @Override
     public Node getContent() throws IOException {
         Node content = loadDefaultContent(this);
-        setInputContent(input, 1);
+        setInputContent(input, 2015, 1);
         return content;
     }
 

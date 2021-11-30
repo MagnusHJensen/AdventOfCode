@@ -7,11 +7,9 @@ module org.example {
     opens org.adventofcode to javafx.fxml;
     opens org.adventofcode.templates to javafx.fxml;
     opens org.adventofcode.cal2015 to javafx.fxml;
-    opens org.adventofcode.cal2016 to javafx.fxml;
-    opens org.adventofcode.math to javafx.fxml;
-    opens org.adventofcode.utils to javafx.fxml;
-    opens org.adventofcode.logiccircuit to javafx.fxml;
-    opens org.adventofcode.graph to javafx.fxml;
+    opens org.adventofcode.cal2020 to javafx.fxml;
+    opens org.adventofcode.cal2021 to javafx.fxml;
+    opens org.adventofcode.maths to javafx.fxml;
     exports org.adventofcode;
     
 }

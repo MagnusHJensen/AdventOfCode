@@ -4,66 +4,82 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
-import org.adventofcode.math.Vec2;
+import org.adventofcode.maths.Vec2;
 import org.adventofcode.templates.Assignment;
 import org.adventofcode.templates.CalenderAssignment;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
-@CalenderAssignment(calendarName = "2015", assignmentName = "Delivering presents: Robo santa", number = 6, description = "Get list of directions(>,v,^,<)\nSanta and robo santa start at 0,0\nAlternately move in direction of arrow\nHow many houses get atleast one present?")
+@CalenderAssignment(calendarName = "2015", assignmentName = "Santa & Robo-Santa", number = 6, description = "Placeholder.")
 public class A3P2 extends Assignment {
+	@FXML
+	private TextArea input;
+	@FXML
+	private TextArea output;
 
-    @FXML
-    private TextArea input;
-    @FXML
-    private TextArea output;
+	public A3P2(String name) {
+		super(name);
+	}
 
-    public A3P2(String name) {
-        super(name);
-    }
+	@Override
+	public Node getContent() throws IOException {
+		Node content = loadDefaultContent(this);
+		setInputContent(input, 2015, 3);
+		return content;
+	}
 
-    @Override
-    public Node getContent() throws IOException {
-        return loadDefaultContent(this);
-    }
+	@FXML
+	public void run(ActionEvent event) {
+		int santaX = 0;
+		int santaY = 0;
+		int roboX = 0;
+		int roboY = 0;
 
-    @FXML
-    public void run(ActionEvent event) {
+		boolean roboTurn = false;
+		ArrayList<Vec2> houseCords = new ArrayList<>();
+		houseCords.add(new Vec2(santaX, santaY));
+		for (char chr : input.getText().toCharArray()) {
+			if (chr == '^') {
+				if (roboTurn) {
+					roboY++;
+				} else {
+					santaY++;
+				}
+			} else if (chr == 'v') {
+				if (roboTurn) {
+					roboY--;
+				} else {
+					santaY--;
+				}
+			} else if (chr == '<') {
+				if (roboTurn) {
+					roboX--;
+				} else {
+					santaX--;
+				}
+			} else if (chr == '>') {
+				if (roboTurn) {
+					roboX++;
+				} else {
+					santaX++;
+				}
+			}
+			Vec2 cord;
+			if (roboTurn) {
+				cord = new Vec2(roboX, roboY);
+			} else {
+				cord = new Vec2(santaX, santaY);
+			}
 
-        List<Vec2> houses = new ArrayList<>();
+			roboTurn = !roboTurn;
 
-        int numMoves = input.getText().length();
-        Vec2[] positions = {new Vec2(), new Vec2()};
-        int index = 0;
+			if (!houseCords.contains(cord)) {
+				houseCords.add(cord);
+			}
 
-        for (char move : input.getText().toCharArray()) {
-            Vec2 pos = positions[index];
+		}
 
-
-            if (!houses.contains(pos)) {
-                houses.add(pos);
-            }
-
-            positions[index] = pos.copy();
-            pos = positions[index];
-            if (move == '^') {
-                pos.setY(pos.getY()+1);
-            }
-            else if (move == 'v') {
-                pos.setY(pos.getY()-1);
-            }
-            else if (move == '<') {
-                pos.setX(pos.getX()-1);
-            }
-            else if (move == '>') {
-                pos.setX(pos.getX()+1);
-            }
-
-            index = index ^ 1;
-        }
-
-        output.setText("Number of moves: " + numMoves + "\nHouse with atleast one present: " + houses.size());
-    }
+		output.setText("Santa visisted " + houseCords.size() + " unique houses.");
+	}
 }

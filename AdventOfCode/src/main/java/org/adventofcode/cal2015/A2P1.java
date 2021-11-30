@@ -9,42 +9,47 @@ import org.adventofcode.templates.CalenderAssignment;
 
 import java.io.IOException;
 
-@CalenderAssignment(calendarName = "2015", assignmentName = "Wrapping presents", number = 3, description = "Get list of boxes(format=LxWxH)\nPaper for box is: surface area + smallest surface as slack\nHow much wrapping paper is needed to wrap all the boxes?")
+@CalenderAssignment(calendarName = "2015", assignmentName = "I was told there would be no math.", number = 3, description = "Calculate how much ")
 public class A2P1 extends Assignment {
 
-    @FXML
-    private TextArea input;
-    @FXML
-    private TextArea output;
+	@FXML
+	private TextArea input;
+	@FXML
+	private TextArea output;
 
-    public A2P1(String name) {
-        super(name);
-    }
+	public A2P1(String name) {
+		super(name);
+	}
 
-    @Override
-    public Node getContent() throws IOException {
-        return loadDefaultContent(this);
-    }
+	@Override
+	public Node getContent() throws IOException {
+		Node content = loadDefaultContent(this);
+		setInputContent(input, 2015, 2);
+		return content;
+	}
 
-    @FXML
-    public void run(ActionEvent event) {
+	@FXML
+	public void run(ActionEvent event) {
+		int totalAmountOfRibbon = 0;
 
-        int totalPaper = 0;
+		for (String line : input.getText().split("\n")) {
 
-        String[] boxes = input.getText().split("\n");
-        int numBoxes = boxes.length;
+			String[] dimensions = line.split("x");
+			int length = Integer.parseInt(dimensions[0]);
+			int width = Integer.parseInt(dimensions[1]);
+			int height = Integer.parseInt(dimensions[2]);
 
-        for (String box : boxes) {
-            String[] dimensions = box.split("x");
-            int l = Integer.parseInt(dimensions[0]);
-            int w = Integer.parseInt(dimensions[1]);
-            int h = Integer.parseInt(dimensions[2]);
-            int lw = l * w;
-            int lh = l * h;
-            int wh = w * h;
-            totalPaper += 2*lw + 2*lh + 2*wh + Math.min(lw, Math.min(lh, wh));
-        }
+			int face1 = length * width;
+			int face2 = width * height;
+			int face3 = length * height;
 
-        output.setText("Number of boxes: " + numBoxes + "\nTotal wrapping paper needed: " + totalPaper);
-    }
+			int amountOfRibbon = 2*face1 + 2*face2 + 2*face3 + Math.min(face1, Math.min(face2, face3));
+
+
+			totalAmountOfRibbon += amountOfRibbon;
+
+		}
+
+		output.setText(String.format("The elves needs a total of %d square feet of ribbon, to wrap all the presents.", totalAmountOfRibbon));
+	}
 }

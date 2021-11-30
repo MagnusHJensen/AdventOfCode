@@ -36,10 +36,10 @@ public abstract class Assignment {
         return loader.load();
     }
 
-    protected void setInputContent(TextArea input, int assignmentNumber) throws IOException {
-        Path inputPath = Path.of("./input", assignmentNumber + ".txt");
+    protected void setInputContent(TextArea input, int calenderNumber, int assignmentNumber) throws IOException {
+        Path inputPath = Path.of("./input/", calenderNumber + "/", assignmentNumber + ".txt");
         if (inputPath.toFile().exists()) {
-            Scanner scanner = new Scanner(Path.of("./input", assignmentNumber + ".txt"));
+            Scanner scanner = new Scanner(Path.of("./input/", calenderNumber + "/", assignmentNumber + ".txt"));
             while (scanner.hasNextLine()) {
                 input.appendText(scanner.nextLine() + "\n");
             }
