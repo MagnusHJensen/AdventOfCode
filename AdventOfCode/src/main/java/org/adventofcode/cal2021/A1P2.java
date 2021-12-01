@@ -8,6 +8,7 @@ import org.adventofcode.templates.Assignment;
 import org.adventofcode.templates.CalenderAssignment;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @CalenderAssignment(calendarName = "2021", assignmentName = "holder", number = 2, description = "Placeholder.")
 public class A1P2 extends Assignment {
@@ -30,5 +31,21 @@ public class A1P2 extends Assignment {
 	public void run(ActionEvent actionEvent) {
 		String[] lines = input.getText().split("\n");
 
+		int amountOfIncreases = 0;
+		int currentSumOfDepths = Integer.MAX_VALUE;
+		for (int i = 0; i < lines.length - 2; i++) {
+			int depthTotal = 0;
+			for (int j = i; j < i + 3; j++) {
+				depthTotal += Integer.parseInt(lines[j]);
+			}
+			System.out.println(depthTotal);
+			if (depthTotal > currentSumOfDepths) {
+				amountOfIncreases++;
+			}
+
+			currentSumOfDepths = depthTotal;
+		}
+
+		output.setText(Integer.toString(amountOfIncreases));
 	}
 }

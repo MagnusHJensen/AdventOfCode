@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/2015/1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/2015/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/2021/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/2021/1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/PrimaryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2015/A10P1.java" beforeDir="false" />
@@ -44,6 +45,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A5P2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A6P1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2016/A6P2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A1P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A1P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A1P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A1P2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/graph/Edge.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/graph/Graph.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/graph/GraphAlgorithms.java" beforeDir="false" />
@@ -193,7 +196,7 @@
       <workItem from="1607586210083" duration="636000" />
       <workItem from="1607625732528" duration="309000" />
       <workItem from="1607802262267" duration="2715000" />
-      <workItem from="1638301723223" duration="452000" />
+      <workItem from="1638301723223" duration="1800000" />
     </task>
     <task id="LOCAL-00001" summary="Added method, to load file input into the input field.">
       <created>1606204779037</created>
