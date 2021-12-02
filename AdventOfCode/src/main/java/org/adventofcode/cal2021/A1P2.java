@@ -10,7 +10,7 @@ import org.adventofcode.templates.CalenderAssignment;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@CalenderAssignment(calendarName = "2021", assignmentName = "holder", number = 2, description = "Placeholder.")
+@CalenderAssignment(calendarName = "2021", assignmentName = "Sonar Sweep - Sliding Window", number = 2, description = "Placeholder.")
 public class A1P2 extends Assignment {
 	@FXML
 	private TextArea input;
