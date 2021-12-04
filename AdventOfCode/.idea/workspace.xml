@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ab29d850-b8e7-4e8a-8b50-815149b2415c" name="Default Changelist" comment="Used new method, to load input content.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A1P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A1P2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A2P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A2P1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A2P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A2P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A3P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A3P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A3P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A3P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +138,9 @@
       <workItem from="1607625732528" duration="309000" />
       <workItem from="1607802262267" duration="2715000" />
       <workItem from="1638301723223" duration="2486000" />
-      <workItem from="1638424991969" duration="627000" />
+      <workItem from="1638424991969" duration="1651000" />
+      <workItem from="1638513320356" duration="4696000" />
+      <workItem from="1638602572876" duration="4026000" />
     </task>
     <task id="LOCAL-00001" summary="Added method, to load file input into the input field.">
       <created>1606204779037</created>
@@ -202,6 +204,12 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/adventofcode/cal2020/A4P2.java</url>
           <line>51</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="boardIdx == 1 &amp;&amp; number == 13" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A4P2.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
