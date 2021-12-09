@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ab29d850-b8e7-4e8a-8b50-815149b2415c" name="Default Changelist" comment="Used new method, to load input content.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A3P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A3P1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A3P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2021/A3P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +139,10 @@
       <workItem from="1638301723223" duration="2486000" />
       <workItem from="1638424991969" duration="1651000" />
       <workItem from="1638513320356" duration="4696000" />
-      <workItem from="1638602572876" duration="4026000" />
+      <workItem from="1638602572876" duration="4628000" />
+      <workItem from="1638690528257" duration="15287000" />
+      <workItem from="1638860432779" duration="1535000" />
+      <workItem from="1638874332962" duration="3769000" />
     </task>
     <task id="LOCAL-00001" summary="Added method, to load file input into the input field.">
       <created>1606204779037</created>

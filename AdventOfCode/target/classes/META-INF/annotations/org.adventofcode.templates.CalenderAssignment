@@ -35,6 +35,7 @@ org.adventofcode.cal2020.A8P1
 org.adventofcode.cal2020.A8P2
 org.adventofcode.cal2020.A9P1
 org.adventofcode.cal2020.A9P2
+org.adventofcode.cal2021.A10P1
 org.adventofcode.cal2021.A1P1
 org.adventofcode.cal2021.A1P2
 org.adventofcode.cal2021.A2P1
@@ -43,3 +44,13 @@ org.adventofcode.cal2021.A3P1
 org.adventofcode.cal2021.A3P2
 org.adventofcode.cal2021.A4P1
 org.adventofcode.cal2021.A4P2
+org.adventofcode.cal2021.A6P1
+org.adventofcode.cal2021.A6P2
+org.adventofcode.cal2021.A7P1
+org.adventofcode.cal2021.A7P2
+org.adventofcode.cal2021.A8P1
+org.adventofcode.cal2021.A8P2
+org.adventofcode.cal2021.A9P1
+org.adventofcode.cal2021.A9P2
+org.adventofcode.cal2021.day_five.A5P1
+org.adventofcode.cal2021.day_five.A5P2
