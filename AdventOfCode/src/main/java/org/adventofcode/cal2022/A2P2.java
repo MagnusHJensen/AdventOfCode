@@ -23,7 +23,7 @@ public class A2P2 extends Assignment {
     @Override
     public Node getContent() throws IOException {
         Node content = loadDefaultContent(this);
-        setInputContent(input, 2022, 4);
+        setInputContent(input, 2022, 2);
         return content;
     }
 

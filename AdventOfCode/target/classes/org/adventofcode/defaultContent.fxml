@@ -20,7 +20,7 @@
             <Insets bottom="10.0" />
          </VBox.margin>
       </TextArea>
-      <Label text="Output">
+      <Label text="Output" fx:id="outputLabel">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

@@ -21,6 +21,7 @@ public class PrimaryController implements Initializable {
                 new Calendar("2022"),
                     new Calendar("2021"),
                     new Calendar("2020"),
+                    new Calendar("2018"),
                     new Calendar("2015")
             );
         } catch (IOException e) {

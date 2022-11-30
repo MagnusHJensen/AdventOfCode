@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab29d850-b8e7-4e8a-8b50-815149b2415c" name="Default Changelist" comment="Used new method, to load input content.">
+    <list default="true" id="ab29d850-b8e7-4e8a-8b50-815149b2415c" name="Default Changelist" comment="Add setup for 2022 calender">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2022/A1P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2022/A1P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2022/A2P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2022/A2P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2022/A2P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/cal2022/A2P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/templates/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/templates/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/adventofcode/defaultContent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/adventofcode/defaultContent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +57,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "last_opened_file_path": "/Users/dkMaHoJe/code/AdventOfCode/AdventOfCode/input/2022",
@@ -71,11 +78,11 @@
       <recent name="org.adventofcode.cal2022" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.adventofcode.cal2018" />
       <recent name="org.adventofcode.cal2022" />
       <recent name="org.adventofcode.cal2022.day_one" />
       <recent name="org.adventofcode.cal2021" />
       <recent name="org.adventofcode.cal2020" />
-      <recent name="org.adventofcode.cal2015" />
     </key>
   </component>
   <component name="RunManager" selected="Application.App">
@@ -143,7 +150,7 @@
       <workItem from="1638690528257" duration="15287000" />
       <workItem from="1638860432779" duration="1535000" />
       <workItem from="1638874332962" duration="3769000" />
-      <workItem from="1669820193731" duration="1818000" />
+      <workItem from="1669820193731" duration="6140000" />
     </task>
     <task id="LOCAL-00001" summary="Added method, to load file input into the input field.">
       <created>1606204779037</created>
@@ -180,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606204924972</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add setup for 2022 calender">
+      <created>1669822053655</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669822053655</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +217,8 @@
     <MESSAGE value="Used new method, to load input content." />
     <MESSAGE value="A1P2 done." />
     <MESSAGE value="Added input files for A1 and A2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added input files for A1 and A2" />
+    <MESSAGE value="Add setup for 2022 calender" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add setup for 2022 calender" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
