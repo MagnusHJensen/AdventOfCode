@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ab29d850-b8e7-4e8a-8b50-815149b2415c" name="Default Changelist" comment="Used new method, to load input content.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/annotations/org.adventofcode.templates.CalenderAssignment" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adventofcode/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adventofcode/PrimaryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -45,24 +49,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.3873563" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "/Users/dkMaHoJe/code/AdventOfCode/AdventOfCode/input/2022",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/input/2022" />
       <recent name="D:\Files\Java projects\AdventOfCodeGUI\AdventOfCode\src\main\java\org\adventofcode\cal2016" />
       <recent name="D:\Files\Java projects\AdventOfCode\src\main\resources\org\adventofcode" />
     </key>
@@ -70,12 +67,15 @@
       <recent name="C:\Users\magnu\code\java\AOC\AdventOfCode\input\2015" />
       <recent name="C:\Users\magnu\code\java\AOC\AdventOfCode\input\2020" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.adventofcode.cal2022" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.adventofcode.cal2022" />
+      <recent name="org.adventofcode.cal2022.day_one" />
       <recent name="org.adventofcode.cal2021" />
       <recent name="org.adventofcode.cal2020" />
       <recent name="org.adventofcode.cal2015" />
-      <recent name="org.adventofcode.cal2016" />
-      <recent name="org.adventofcode.logiccircuit" />
     </key>
   </component>
   <component name="RunManager" selected="Application.App">
@@ -143,6 +143,7 @@
       <workItem from="1638690528257" duration="15287000" />
       <workItem from="1638860432779" duration="1535000" />
       <workItem from="1638874332962" duration="3769000" />
+      <workItem from="1669820193731" duration="1818000" />
     </task>
     <task id="LOCAL-00001" summary="Added method, to load file input into the input field.">
       <created>1606204779037</created>
@@ -184,6 +185,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added method, to load file input into the input field." />

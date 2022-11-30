@@ -10,7 +10,8 @@ module org.example {
     opens org.adventofcode.cal2020 to javafx.fxml;
     opens org.adventofcode.cal2021 to javafx.fxml;
     opens org.adventofcode.maths to javafx.fxml;
-    exports org.adventofcode;
     opens org.adventofcode.cal2021.day_five to javafx.fxml;
+    opens org.adventofcode.cal2022 to javafx.fxml;
 
+    exports org.adventofcode;
 }
