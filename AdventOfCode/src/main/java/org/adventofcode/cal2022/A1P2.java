@@ -31,7 +31,7 @@ public class A1P2 extends Assignment {
     }
 
     public void run(ActionEvent actionEvent) {
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
         String[] lines = input.getText().split("\n");
 
         int[] topThreeCalorieCount = new int[3];
@@ -54,9 +54,9 @@ public class A1P2 extends Assignment {
             currentCalorieCount += calorieInItem;
         }
 
-        long stop = System.currentTimeMillis();
+        long stop = System.nanoTime();
 
-        outputLabel.setText("Output - Execution time: " + (stop - start) + "ms");
+        outputLabel.setText("Output - Execution time: " + ((stop - start) / 1_000_000_000.0) + " seconds");
         output.setText(String.format("Output: " + (topThreeCalorieCount[0] + topThreeCalorieCount[1] + topThreeCalorieCount[2])));
     }
 }

@@ -3,6 +3,7 @@ package org.adventofcode.cal2021;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import org.adventofcode.templates.Assignment;
 import org.adventofcode.templates.CalenderAssignment;
@@ -19,6 +20,8 @@ public class A6P2 extends Assignment {
 	private TextArea input;
 	@FXML
 	private TextArea output;
+    @FXML
+    private Label outputLabel;
 
 	public A6P2(String name) {
 		super(name);
@@ -32,6 +35,7 @@ public class A6P2 extends Assignment {
 	}
 
 	public void run(ActionEvent actionEvent) {
+        long start = System.nanoTime();
 		List<Long> ages = Arrays.stream(input.getText().split("\n")[0].split(",")).map(Long::parseLong).collect(Collectors.toList());
 
 		HashMap<Long, Long> fishByAge = new HashMap<>();
@@ -60,8 +64,9 @@ public class A6P2 extends Assignment {
 			fishByAge.put(6L, fishByAge.get(6L) + newFish);
 
 		}
-
-		System.out.println(fishByAge.values().stream().mapToLong(Long::longValue).sum());
+        long end = System.nanoTime();
+        outputLabel.setText("Output - Execution time: " + (end - start) / 1_000_000_000d);
+        output.setText("How many lanternfish would there be after 256 days?\n- " + fishByAge.values().stream().mapToLong(Long::longValue).sum());
 
 	}
 }

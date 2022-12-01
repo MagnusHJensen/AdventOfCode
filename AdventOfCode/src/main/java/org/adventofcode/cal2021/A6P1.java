@@ -3,6 +3,7 @@ package org.adventofcode.cal2021;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import org.adventofcode.templates.Assignment;
 import org.adventofcode.templates.CalenderAssignment;
@@ -18,6 +19,8 @@ public class A6P1 extends Assignment {
 	private TextArea input;
 	@FXML
 	private TextArea output;
+    @FXML
+    private Label outputLabel;
 
 	public A6P1(String name) {
 		super(name);
@@ -31,6 +34,7 @@ public class A6P1 extends Assignment {
 	}
 
 	public void run(ActionEvent actionEvent) {
+        long start = System.nanoTime();
 		Integer[] ages = Arrays.stream(input.getText().split("\n")[0].split(",")).map(Integer::parseInt).toArray(Integer[]::new);
 
 		for (int i = 0; i < 80; i++) {
@@ -59,6 +63,8 @@ public class A6P1 extends Assignment {
 			System.out.println(i);
 		}
 
-		System.out.println(ages.length);
+        long end = System.nanoTime();
+        outputLabel.setText("Output - Execution time: " + ((end - start) / 1_000_000_000d));
+        output.setText("How many lanternfish would there be after 80 days?\n- " + ages.length);
 	}
 }

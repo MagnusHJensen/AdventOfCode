@@ -31,7 +31,7 @@ public class A1P1 extends Assignment {
     }
 
     public void run(ActionEvent actionEvent) {
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
         String[] lines = input.getText().split("\n");
 
         int highestCalorieCount = Integer.MIN_VALUE;
@@ -49,9 +49,9 @@ public class A1P1 extends Assignment {
             currentCalorieCount += calorieInItem;
         }
 
-        long stop = System.currentTimeMillis();
+        long stop = System.nanoTime();
 
-        outputLabel.setText("Output - Execution time: " + (stop - start) + "ms");
+        outputLabel.setText("Output - Execution time: " + ((stop - start) / 1_000_000_000d) + " seconds");
         output.setText("Output: " + highestCalorieCount);
 
     }
