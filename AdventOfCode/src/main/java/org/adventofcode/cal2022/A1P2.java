@@ -3,6 +3,7 @@ package org.adventofcode.cal2022;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import org.adventofcode.templates.Assignment;
 import org.adventofcode.templates.CalenderAssignment;
@@ -15,6 +16,8 @@ public class A1P2 extends Assignment {
     private TextArea input;
     @FXML
     private TextArea output;
+    @FXML
+    private Label outputLabel;
 
     public A1P2(String name) {
         super(name);
@@ -28,7 +31,32 @@ public class A1P2 extends Assignment {
     }
 
     public void run(ActionEvent actionEvent) {
+        long start = System.currentTimeMillis();
         String[] lines = input.getText().split("\n");
 
+        int[] topThreeCalorieCount = new int[3];
+        int currentCalorieCount = 0;
+        for (String line : lines) {
+            if (line.isEmpty()) {
+
+                if (currentCalorieCount > topThreeCalorieCount[2]) {
+                    topThreeCalorieCount = new int[] {topThreeCalorieCount[1], topThreeCalorieCount[2], currentCalorieCount};
+                } else if (topThreeCalorieCount[1] < currentCalorieCount && currentCalorieCount < topThreeCalorieCount[2]) {
+                    topThreeCalorieCount = new int[] {topThreeCalorieCount[1], currentCalorieCount, topThreeCalorieCount[2]};
+                } else if (currentCalorieCount > topThreeCalorieCount[0] && currentCalorieCount < topThreeCalorieCount[1]) {
+                    topThreeCalorieCount = new int[] {currentCalorieCount, topThreeCalorieCount[1], topThreeCalorieCount[2]};
+                }
+                currentCalorieCount = 0;
+                continue;
+            }
+
+            int calorieInItem = Integer.parseInt(line);
+            currentCalorieCount += calorieInItem;
+        }
+
+        long stop = System.currentTimeMillis();
+
+        outputLabel.setText("Output - Execution time: " + (stop - start) + "ms");
+        output.setText(String.format("Output: " + (topThreeCalorieCount[0] + topThreeCalorieCount[1] + topThreeCalorieCount[2])));
     }
 }
