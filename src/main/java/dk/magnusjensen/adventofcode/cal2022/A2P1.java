@@ -33,9 +33,26 @@ public class A2P1 extends Assignment {
     public void run(ActionEvent actionEvent) {
         long start = System.nanoTime();
         String[] lines = input.getText().split("\n");
+        int total = 0;
+
+        for (String line : lines) {
+            String[] parts = line.split(" ");
+
+            char first = parts[0].charAt(0);
+            char second = parts[1].charAt(0);
+
+            total += second == 'X' ? 1 : second == 'Y' ? 2 : 3;
+
+            if ((second == 'X' && first == 'A') || (second == 'Y' && first == 'B') || (second == 'Z' && first == 'C')) {
+                total += 3;
+            }
+             else if ((second == 'X' && first == 'C') || (second == 'Y' && first == 'A') || (second == 'Z' && first == 'B')) {
+                total += 6;
+            }
+        }
 
         long end = System.nanoTime();
         outputLabel.setText("Output - Execution time: " + (end - start) / 1_000_000_000d);
-        output.setText("Output: ");
+        output.setText("Output: " + total);
     }
 }
