@@ -34,9 +34,29 @@ public class A3P1 extends Assignment {
         long start = System.nanoTime();
         String[] lines = input.getText().split("\n");
 
+        int sum = 0;
+
+        for (String rucksack : lines) {
+            String leftCompartment = rucksack.substring(0, (rucksack.length() / 2));
+            String rightCompartment = rucksack.substring((rucksack.length() / 2));
+
+            for (int i = 0; i < leftCompartment.length(); i++) {
+                char leftChar = leftCompartment.charAt(i);
+
+                if (rightCompartment.contains("" + leftChar)) {
+                    if (Character.isUpperCase(leftChar)) {
+                        sum += 27 + (leftChar - 65);
+                    } else {
+                        sum += 1 + (leftChar - 97);
+                    }
+                    break;
+                }
+            }
+        }
+
         long end = System.nanoTime();
         outputLabel.setText("Output - Execution time: " + (end - start) / 1_000_000_000d);
-        output.setText("Output: ");
+        output.setText("Output: " + sum);
 
     }
 }

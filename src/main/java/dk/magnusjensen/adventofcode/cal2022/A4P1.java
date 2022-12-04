@@ -23,12 +23,36 @@ public class A4P1 extends Assignment {
     @Override
     public Node getContent() throws IOException {
         Node content = loadDefaultContent(this);
-        setInputContent(input, 2022, 7);
+        setInputContent(input, 2022, 4);
         return content;
     }
 
     public void run(ActionEvent actionEvent) {
+        long start = System.nanoTime();
         String[] lines = input.getText().split("\n");
 
+        int total = 0;
+
+        for (String line : lines) {
+            String first = line.split(",")[0];
+            String second = line.split(",")[1];
+            int lowerFirst = Integer.parseInt(first.split("-")[0]);
+            int upperFirst = Integer.parseInt(first.split("-")[1]);
+            int lowerSecond = Integer.parseInt(second.split("-")[0]);
+            int upperSecond = Integer.parseInt(second.split("-")[1]);
+
+            if (lowerFirst <= lowerSecond && upperFirst >= upperSecond) {
+                total += 1;
+                continue;
+            }
+
+            if (lowerSecond <= lowerFirst && upperSecond >= upperFirst) {
+                total += 1;
+            }
+        }
+
+
+        long end = System.nanoTime();
+        output.setText("Output: " + total);
     }
 }
