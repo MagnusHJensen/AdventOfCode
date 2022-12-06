@@ -27,7 +27,7 @@ import java.util.TreeMap;
 public class Calendar extends Tab implements Initializable {
 
     private ObservableList<Assignment> assignments;
-    private String name;
+    private int name;
 
     private CalenderAssignment currentAnnotation;
 
@@ -36,8 +36,8 @@ public class Calendar extends Tab implements Initializable {
     @FXML
     private ListView<Assignment> assignmentList;
 
-    public Calendar(String name) throws IOException {
-        super(name);
+    public Calendar(int name) throws IOException {
+        super(String.valueOf(name));
         this.name = name;
         currentAnnotation = null;
         assignments = FXCollections.observableArrayList();
@@ -54,7 +54,7 @@ public class Calendar extends Tab implements Initializable {
         DecimalFormat df = new DecimalFormat("0");
         for (Class<?> c : classes) {
             CalenderAssignment ca = (CalenderAssignment) c.getAnnotationsByType(CalenderAssignment.class)[0];
-            if (ca.calendarName().equals(name)) {
+            if (ca.calendarName() == name) {
                 try {
                     float cnt = (float)Math.ceil((double)ca.number() * 0.5d);
                     assignmentMap.put(ca.number(), (Assignment) c.getDeclaredConstructor(String.class).newInstance(df.format(cnt) +(ca.number() % 2 == 0 ? "B": "A")+ ") " + ca.assignmentName()));

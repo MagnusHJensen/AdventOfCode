@@ -2,7 +2,6 @@ package dk.magnusjensen.adventofcode.cal2021;
 
 import dk.magnusjensen.adventofcode.templates.Assignment;
 import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -14,10 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@CalenderAssignment(calendarName = "2021", assignmentName = "placeholder", number = 12, description = "Placeholder.")
+@CalenderAssignment(calendarName = 2021, assignmentName = "placeholder", number = 12, description = "Placeholder.")
 public class A6P2 extends Assignment {
-	@FXML
-	private TextArea input;
+	
 	@FXML
 	private TextArea output;
     @FXML
@@ -34,9 +32,9 @@ public class A6P2 extends Assignment {
 		return content;
 	}
 
-	public void run(ActionEvent actionEvent) {
+	public void partOne(String input) {
         long start = System.nanoTime();
-		List<Long> ages = Arrays.stream(input.getText().split("\n")[0].split(",")).map(Long::parseLong).collect(Collectors.toList());
+		List<Long> ages = Arrays.stream(input.split("\n")[0].split(",")).map(Long::parseLong).collect(Collectors.toList());
 
 		HashMap<Long, Long> fishByAge = new HashMap<>();
 

@@ -25,7 +25,7 @@ public class Template {
 //	}
 //
 //	@FXML
-//	public void run(ActionEvent event) {
+//	public void partOne(ActionEvent event) {
 //
 //	}
 }

@@ -10,7 +10,7 @@ import org.atteo.classindex.IndexAnnotated;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface CalenderAssignment {
-    public String calendarName() default "unknown";
+    public int calendarName() default -1;
     public String assignmentName() default "Assignment";
     public int number() default 1;
     public String description() default "No description.";

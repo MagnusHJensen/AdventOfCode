@@ -1,6 +1,5 @@
 package dk.magnusjensen.adventofcode.cal2015;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
@@ -10,10 +9,9 @@ import dk.magnusjensen.adventofcode.utils.StringUtils;
 
 import java.io.IOException;
 
-@CalenderAssignment(calendarName = "2015", assignmentName = "Nice or Naughty Strings", number = 9, description = "Placeholder.")
+@CalenderAssignment(calendarName = 2015, assignmentName = "Nice or Naughty Strings", number = 9, description = "Placeholder.")
 public class A5P1 extends Assignment {
-	@FXML
-	private TextArea input;
+	
 	@FXML
 	private TextArea output;
 
@@ -21,22 +19,17 @@ public class A5P1 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2015, 5);
-		return content;
-	}
+	
 
 	@FXML
-	public void run(ActionEvent event) {
+	public void partOne(String input) {
 
 		char[] vowels = new char[] {'a', 'e', 'i', 'o', 'u'};
 		String[] naughtyWords = new String[] {"ab", "cd", "pq", "xy"};
 
 		int niceWords = 0;
 
-		for (String line : input.getText().split("\n")) {
+		for (String line : input.split("\n")) {
 
 			boolean flagged = StringUtils.checkStringForWords(line, naughtyWords);
 			if (flagged) {

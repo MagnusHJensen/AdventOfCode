@@ -2,7 +2,6 @@ package dk.magnusjensen.adventofcode.cal2020;
 
 import dk.magnusjensen.adventofcode.templates.Assignment;
 import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
@@ -11,10 +10,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-@CalenderAssignment(calendarName = "2020", assignmentName = "DAY 5 PART 2", number = 10, description = "Placeholder.")
+@CalenderAssignment(calendarName = 2020, assignmentName = "DAY 5 PART 2", number = 10, description = "Placeholder.")
 public class A5P2 extends Assignment {
-	@FXML
-	private TextArea input;
+	
 	@FXML
 	private TextArea output;
 
@@ -30,8 +28,8 @@ public class A5P2 extends Assignment {
 	}
 
 	@FXML
-	public void run(ActionEvent event) {
-		String[] lines = input.getText().split("\n");
+	public void partOne(String input) {
+		String[] lines = input.split("\n");
 
 		int seatId = 0;
 

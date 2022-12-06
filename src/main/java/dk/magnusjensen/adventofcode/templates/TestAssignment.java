@@ -1,6 +1,5 @@
 package dk.magnusjensen.adventofcode.templates;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
@@ -8,11 +7,9 @@ import javafx.scene.control.TextArea;
 import java.io.IOException;
 
 
-//@CalenderAssignment(calendarName = "2015", assignmentName = "TestAssignment", number = 1, description = "Some description")
+//@CalenderAssignment(calendarName = 2015, assignmentName = "TestAssignment", number = 1, description = "Some description")
 public class TestAssignment extends Assignment {
 
-    @FXML
-    private TextArea input;
     @FXML
     private TextArea output;
 
@@ -26,7 +23,7 @@ public class TestAssignment extends Assignment {
     }
 
     @FXML
-    public void run(ActionEvent event) {
-        output.setText(input.getText());
+    public void partOne(String input) {
+        output.setText(input);
     }
 }

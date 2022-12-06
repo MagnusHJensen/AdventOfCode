@@ -2,8 +2,11 @@ package dk.magnusjensen.adventofcode.templates;
 
 
 import dk.magnusjensen.adventofcode.App;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
 import java.io.IOException;
@@ -12,9 +15,13 @@ import java.util.Scanner;
 
 public abstract class Assignment {
 
+    @FXML
+    private TextArea input;
     private String name;
+    @FXML
+    private Label outputLabel;
 
-    public Assignment (String name) {
+    public Assignment(String name) {
         this.name = name;
     }
 
@@ -22,18 +29,20 @@ public abstract class Assignment {
         return name;
     }
 
-    public abstract Node getContent () throws IOException;
+    public Node getContent() throws IOException {
+        Node content = loadDefaultContent(this);
+        setInputContent(input, this.getClass().getAnnotation(CalenderAssignment.class).calendarName(), Math.round(this.getClass().getAnnotation(CalenderAssignment.class).number() / 2f));
+        return content;
+    };
 
-    protected Node loadContent (String fxml, Object controller) throws IOException {
+    protected Node loadContent(String fxml, Object controller) throws IOException {
         FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         loader.setController(controller);
         return loader.load();
     }
 
     protected Node loadDefaultContent (Assignment controller) throws IOException {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource("defaultContent.fxml"));
-        loader.setController(controller);
-        return loader.load();
+        return loadContent("defaultContent", controller);
     }
 
     protected void setInputContent(TextArea input, int calenderNumber, int day) throws IOException {
@@ -45,6 +54,15 @@ public abstract class Assignment {
             }
         }
     }
+
+    public void run(ActionEvent actionEvent) {
+        long start = System.nanoTime();
+        partOne(input.getText());
+        long end = System.nanoTime();
+        outputLabel.setText("Output - Execution Time: " + (end - start) / 1_000_000d + " seconds");
+    }
+
+    protected abstract void partOne(String input);
 
     @Override
     public String toString() {

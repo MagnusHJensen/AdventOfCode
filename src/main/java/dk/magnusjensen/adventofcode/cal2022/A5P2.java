@@ -2,42 +2,26 @@ package dk.magnusjensen.adventofcode.cal2022;
 
 import dk.magnusjensen.adventofcode.templates.Assignment;
 import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
-@CalenderAssignment(calendarName = "2022", assignmentName = "", number = 10, description = "")
+@CalenderAssignment(calendarName = 2022, assignmentName = "", number = 10, description = "")
 public class A5P2 extends Assignment {
-    @FXML
-    private TextArea input;
+    
     @FXML
     private TextArea output;
-    @FXML
-    private Label outputLabel;
 
     public A5P2(String name) {
         super(name);
     }
 
-    @Override
-    public Node getContent() throws IOException {
-        Node content = loadDefaultContent(this);
-        setInputContent(input, 2022, 5);
-        return content;
-    }
-
-    public void run() {
-        long start = System.nanoTime();
-
-        String[] lines = input.getText().split("\n");
+    public void partOne(String input) {
+        String[] lines = input.split("\n");
 
         String[] moveCommands = Arrays.copyOfRange(lines, 10, lines.length);
 
@@ -46,10 +30,11 @@ public class A5P2 extends Assignment {
             stacks[i] = new Stack<>();
         }
 
+        // This is very specific input parsing.
+
         for (int i = 7; i >= 0; i--) {
             for (int k = 0; k < 9; k++) {
-                // Check 3 character substring, with an additiona offset of 1 for each index.
-                char crateChar = lines[i].charAt(k * 3 + (k) + 1);
+                char crateChar = moveCommands[i].charAt(k * 3 + (k) + 1);
                 if (Character.isLetter(crateChar)) {
                     stacks[k].push(crateChar);
                 }
@@ -73,12 +58,10 @@ public class A5P2 extends Assignment {
 
         StringBuilder builder = new StringBuilder();
 
-        for (int i = 0; i < stacks.length; i++) {
-            builder.append(stacks[i].peek());
+        for (Stack<Character> stack : stacks) {
+            builder.append(stack.peek());
         }
 
-        long end = System.nanoTime();
-        outputLabel.setText("Output - Execution time: " + (end - start) / 1_000_000d + " seconds");
         output.setText("Output: " + builder);
     }
 }

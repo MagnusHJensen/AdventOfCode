@@ -1,6 +1,5 @@
 package dk.magnusjensen.adventofcode.cal2015;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
@@ -10,11 +9,9 @@ import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
 import java.io.IOException;
 import java.util.Arrays;
 
-@CalenderAssignment(calendarName = "2015", assignmentName = "Total length of ribbon", number = 4, description = "Calculate how much ribbon, the elves need to order.")
+@CalenderAssignment(calendarName = 2015, assignmentName = "Total length of ribbon", number = 4, description = "Calculate how much ribbon, the elves need to order.")
 public class A2P2 extends Assignment {
 
-	@FXML
-	private TextArea input;
 	@FXML
 	private TextArea output;
 
@@ -22,18 +19,11 @@ public class A2P2 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2015, 2);
-		return content;
-	}
-
 	@FXML
-	public void run(ActionEvent event) {
+	public void partOne(String input) {
 		int totalAmountOfRibbon = 0;
 
-		for (String line : input.getText().split("\n")) {
+		for (String line : input.split("\n")) {
 
 			String[] dimensions = line.split("x");
 			int length = Integer.parseInt(dimensions[0]);

@@ -2,7 +2,6 @@ package dk.magnusjensen.adventofcode.cal2021;
 
 import dk.magnusjensen.adventofcode.templates.Assignment;
 import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
@@ -10,10 +9,9 @@ import javafx.scene.control.TextArea;
 import java.io.IOException;
 import java.util.Arrays;
 
-@CalenderAssignment(calendarName = "2021", assignmentName = "placeholder", number = 14, description = "Placeholder.")
+@CalenderAssignment(calendarName = 2021, assignmentName = "placeholder", number = 14, description = "Placeholder.")
 public class A7P2 extends Assignment {
-	@FXML
-	private TextArea input;
+	
 	@FXML
 	private TextArea output;
 
@@ -28,8 +26,8 @@ public class A7P2 extends Assignment {
 		return content;
 	}
 
-	public void run(ActionEvent actionEvent) {
-		int[] positions = Arrays.stream(input.getText().split("\n")[0].split(",")).mapToInt(Integer::parseInt).toArray();
+	public void partOne(String input) {
+		int[] positions = Arrays.stream(input.split("\n")[0].split(",")).mapToInt(Integer::parseInt).toArray();
 
 		Arrays.sort(positions);
 

@@ -1,6 +1,5 @@
 package dk.magnusjensen.adventofcode.cal2015;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
@@ -14,10 +13,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-@CalenderAssignment(calendarName = "2015", assignmentName = "Some Assembly Required", number = 13, description = "Placeholder.")
+@CalenderAssignment(calendarName = 2015, assignmentName = "Some Assembly Required", number = 13, description = "Placeholder.")
 public class A7P1 extends Assignment {
-	@FXML
-	private TextArea input;
+	
 	@FXML
 	private TextArea output;
 
@@ -25,18 +23,13 @@ public class A7P1 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2015, 7);
-		return content;
-	}
+	
 
 	@FXML
-	public void run(ActionEvent event) {
+	public void partOne(String input) {
 		HashMap<String, Integer> wires = new HashMap<>();
 
-		List<String> lines = new ArrayList<>(Arrays.asList(input.getText().split("\n")));
+		List<String> lines = new ArrayList<>(Arrays.asList(input.split("\n")));
 
 		ArrayList<Integer> intsToRemove = new ArrayList<>();
 

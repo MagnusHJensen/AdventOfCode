@@ -2,7 +2,6 @@ package dk.magnusjensen.adventofcode.cal2018;
 
 import dk.magnusjensen.adventofcode.templates.Assignment;
 import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -12,10 +11,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@CalenderAssignment(calendarName = "2018", assignmentName = "", number = 3, description = "")
+@CalenderAssignment(calendarName = 2018, assignmentName = "", number = 3, description = "")
 public class A2P1 extends Assignment {
-    @FXML
-    private TextArea input;
+    
     @FXML
     private TextArea output;
     @FXML
@@ -25,20 +23,15 @@ public class A2P1 extends Assignment {
         super(name);
     }
 
-    @Override
-    public Node getContent() throws IOException {
-        Node content = loadDefaultContent(this);
-        setInputContent(input, 2018, 2);
-        return content;
-    }
+    
 
     @FXML
-    public void run(ActionEvent event) {
+    public void partOne(String input) {
         long start = System.currentTimeMillis();
 
         int twoLetterCount = 0;
         int threeLetterCount = 0;
-        String[] lines = input.getText().split("\n");
+        String[] lines = input.split("\n");
 
         HashMap<Character, Integer> letterCount = new HashMap<>();
         for (String line : lines) {

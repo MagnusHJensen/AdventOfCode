@@ -2,17 +2,15 @@ package dk.magnusjensen.adventofcode.cal2020;
 
 import dk.magnusjensen.adventofcode.templates.Assignment;
 import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
 
 import java.io.IOException;
 
-@CalenderAssignment(calendarName = "2020", assignmentName = "Password Philosophy", number = 3, description = "Each line gives the password policy and then the password. \nThe password policy indicates the lowest and highest number of times a given letter must appear for the password to be valid. \nFor example, 1-3 a means that the password must contain a at least 1 time and at most 3 times.")
+@CalenderAssignment(calendarName = 2020, assignmentName = "Password Philosophy", number = 3, description = "Each line gives the password policy and then the password. \nThe password policy indicates the lowest and highest number of times a given letter must appear for the password to be valid. \nFor example, 1-3 a means that the password must contain a at least 1 time and at most 3 times.")
 public class A2P1 extends Assignment {
-	@FXML
-	private TextArea input;
+	
 	@FXML
 	private TextArea output;
 
@@ -28,8 +26,8 @@ public class A2P1 extends Assignment {
 	}
 
 	@FXML
-	public void run(ActionEvent event) {
-		String[] lines = input.getText().split("\n");
+	public void partOne(String input) {
+		String[] lines = input.split("\n");
 		int total = 0;
 
 		for (String line : lines) {

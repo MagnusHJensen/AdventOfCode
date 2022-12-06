@@ -1,6 +1,5 @@
 package dk.magnusjensen.adventofcode.cal2015;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
@@ -11,27 +10,18 @@ import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@CalenderAssignment(calendarName = "2015", assignmentName = "Light Level 1000 x 1000", number = 12, description = "Placeholder.")
+@CalenderAssignment(calendarName = 2015, assignmentName = "Light Level 1000 x 1000", number = 12, description = "Placeholder.")
 public class A6P2 extends Assignment {
-	@FXML
-	private TextArea input;
-	@FXML
+
 	private TextArea output;
 
 	public A6P2(String name) {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2015, 6);
-		return content;
-	}
-
 	@FXML
-	public void run(ActionEvent event) {
-		String[] commands = input.getText().split("\n");
+	public void partOne(String input) {
+		String[] commands = input.split("\n");
 
 		ArrayList<Light> lights = new ArrayList<>();
 

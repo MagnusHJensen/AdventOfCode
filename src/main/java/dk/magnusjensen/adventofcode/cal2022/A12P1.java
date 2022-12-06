@@ -1,6 +1,5 @@
 package dk.magnusjensen.adventofcode.cal2022;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.TextArea;
@@ -9,10 +8,9 @@ import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
 
 import java.io.IOException;
 
-@CalenderAssignment(calendarName = "2022", assignmentName = "", number = 23, description = "")
+@CalenderAssignment(calendarName = 2022, assignmentName = "", number = 23, description = "")
 public class A12P1 extends Assignment {
-    @FXML
-    private TextArea input;
+    
     @FXML
     private TextArea output;
 
@@ -27,8 +25,8 @@ public class A12P1 extends Assignment {
         return content;
     }
 
-    public void run(ActionEvent actionEvent) {
-        String[] lines = input.getText().split("\n");
+    public void partOne(String input) {
+        String[] lines = input.split("\n");
 
     }
 }

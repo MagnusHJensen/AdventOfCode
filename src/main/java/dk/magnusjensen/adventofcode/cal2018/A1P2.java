@@ -2,7 +2,6 @@ package dk.magnusjensen.adventofcode.cal2018;
 
 import dk.magnusjensen.adventofcode.templates.Assignment;
 import dk.magnusjensen.adventofcode.templates.CalenderAssignment;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -12,10 +11,9 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-@CalenderAssignment(calendarName = "2018", assignmentName = "", number = 2, description = "")
+@CalenderAssignment(calendarName = 2018, assignmentName = "", number = 2, description = "")
 public class A1P2 extends Assignment {
-    @FXML
-    private TextArea input;
+    
     @FXML
     private TextArea output;
     @FXML
@@ -25,20 +23,15 @@ public class A1P2 extends Assignment {
         super(name);
     }
 
-    @Override
-    public Node getContent() throws IOException {
-        Node content = loadDefaultContent(this);
-        setInputContent(input, 2018, 1);
-        return content;
-    }
+    
 
     @FXML
-    public void run(ActionEvent event) {
+    public void partOne(String input) {
         long start = System.currentTimeMillis();
 
         Set<Integer> seenFrequencies = new HashSet<>();
         int frequency = 0;
-        String[] lines = input.getText().split("\n");
+        String[] lines = input.split("\n");
 
         for (int i = 0; i < lines.length; i++) {
             String line = lines[i];
