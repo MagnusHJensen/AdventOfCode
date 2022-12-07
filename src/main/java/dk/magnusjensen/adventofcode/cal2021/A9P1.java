@@ -19,12 +19,6 @@ public class A9P1 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2021, 9);
-		return content;
-	}
 	ArrayList<Integer> lowPoints = new ArrayList<>();
 
 	public void partOne(String input) {

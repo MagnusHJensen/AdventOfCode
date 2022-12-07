@@ -25,13 +25,6 @@ public class A6P2 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2021, 6);
-		return content;
-	}
-
 	public void partOne(String input) {
         long start = System.nanoTime();
 		List<Long> ages = Arrays.stream(input.split("\n")[0].split(",")).map(Long::parseLong).collect(Collectors.toList());

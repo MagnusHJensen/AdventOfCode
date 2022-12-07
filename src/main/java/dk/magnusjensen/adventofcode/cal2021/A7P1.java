@@ -19,13 +19,6 @@ public class A7P1 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2021, 7);
-		return content;
-	}
-
 	public void partOne(String input) {
 		int[] positions = Arrays.stream(input.split("\n")[0].split(",")).mapToInt(Integer::parseInt).toArray();
 

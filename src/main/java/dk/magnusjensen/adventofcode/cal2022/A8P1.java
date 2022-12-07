@@ -18,12 +18,6 @@ public class A8P1 extends Assignment {
         super(name);
     }
 
-    @Override
-    public Node getContent() throws IOException {
-        Node content = loadDefaultContent(this);
-        setInputContent(input, 2022, 15);
-        return content;
-    }
 
     public void partOne(String input) {
         String[] lines = input.split("\n");

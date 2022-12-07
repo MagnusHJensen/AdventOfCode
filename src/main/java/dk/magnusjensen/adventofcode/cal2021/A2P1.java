@@ -18,12 +18,7 @@ public class A2P1 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2021, 2);
-		return content;
-	}
+	
 
 	public void partOne(String input) {
 		String[] lines = input.split("\n");
