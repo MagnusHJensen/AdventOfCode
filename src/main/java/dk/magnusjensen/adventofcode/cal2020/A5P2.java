@@ -20,12 +20,7 @@ public class A5P2 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2020, 5);
-		return content;
-	}
+	
 
 	@FXML
 	public void partOne(String input) {

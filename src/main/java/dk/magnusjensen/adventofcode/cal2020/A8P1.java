@@ -19,12 +19,6 @@ public class A8P1 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2020, 8);
-		return content;
-	}
 
 	@FXML
 	public void partOne(String input) {

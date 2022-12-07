@@ -18,12 +18,7 @@ public class A5P1 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2020, 5);
-		return content;
-	}
+	
 
 	// F means take the lower range
 	// B Upper range

@@ -18,13 +18,6 @@ public class A1P2 extends Assignment {
 		super(name);
 	}
 
-	@Override
-	public Node getContent() throws IOException {
-		Node content = loadDefaultContent(this);
-		setInputContent(input, 2020, 1);
-		return content;
-	}
-
 	@FXML
 	public void partOne(String input) {
 		String[] lines = input.split("\n");
