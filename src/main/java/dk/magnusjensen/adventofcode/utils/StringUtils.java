@@ -5,6 +5,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class StringUtils {
+    /**
+     * Gets the MD5 hash of any string.
+     * @param input A string to get the MD5 hash of.
+     * @return The MD5 hash of any string.
+     */
 	public static String getMD5(String input) {
 		try {
 			MessageDigest md = MessageDigest.getInstance("MD5");
@@ -23,9 +28,15 @@ public class StringUtils {
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
-		return "Failed";
+		throw new RuntimeException("Failed");
 	}
 
+    /**
+     *
+     * @param input The String to check
+     * @param checkList A list words to check for.
+     * @return A boolean if the input contains any of the checkList words.
+     */
 	public static boolean checkStringForWords(String input, String[] checkList) {
 		for (String check : checkList) {
 			if (input.contains(check)) {
@@ -35,6 +46,12 @@ public class StringUtils {
 		return false;
 	}
 
+    /**
+     * Returns how many times the string matches a character from the list.
+     * @param input The string to check characters for.
+     * @param chars An array of characters.
+     * @return How many times the string matches a character from the list.
+     */
 	public static int countCharactersInString(String input, char[] chars) {
 		int counter = 0;
 		for (char chr : input.toCharArray()) {
@@ -48,6 +65,12 @@ public class StringUtils {
 		return counter;
 	}
 
+    /**
+     *
+     * @param input The string to check
+     * @param amount The amount of characters there should be in a row.
+     * @return A boolean based on if the string contained the amount of characters in a row.
+     */
 	public static boolean checkCharsInRow(String input, int amount) {
 		char chrCheck = 0;
 		int counter = 0;

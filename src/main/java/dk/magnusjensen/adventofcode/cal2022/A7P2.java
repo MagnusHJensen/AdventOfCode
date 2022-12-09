@@ -56,7 +56,7 @@ public class A7P2 extends Assignment {
     }
 
     public int setSizes(Node node) {
-        int total = node.getChildren().stream().mapToInt((dirNode) -> setSizes(dirNode)).sum() + node.getFiles().stream().mapToInt((file) -> file.getSize()).sum();
+        int total = node.getChildren().stream().mapToInt((dirNode) -> setSizes(dirNode)).sum() + node.getFiles() .stream().mapToInt((file) -> file.getSize()).sum();
         node.setSize(total);
         return total;
     }
