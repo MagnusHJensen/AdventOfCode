@@ -48,6 +48,9 @@ public class StringUtils {
 
     /**
      * Returns how many times the string matches a character from the list.
+     * <pre>
+     * countCharactersInString("Hello World", new char[]{'l', 'o'}) == 4
+     * </pre>
      * @param input The string to check characters for.
      * @param chars An array of characters.
      * @return How many times the string matches a character from the list.
@@ -66,7 +69,9 @@ public class StringUtils {
 	}
 
     /**
-     *
+     * <pre>
+     *     checkCharsInRow("Hello World", 2) == true
+     * </pre>
      * @param input The string to check
      * @param amount The amount of characters there should be in a row.
      * @return A boolean based on if the string contained the amount of characters in a row.

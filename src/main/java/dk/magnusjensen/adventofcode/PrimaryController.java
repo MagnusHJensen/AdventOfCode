@@ -18,7 +18,8 @@ public class PrimaryController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             rootPane.getTabs().addAll(
-                new Calendar(2022),
+                new Calendar(2023),
+                    new Calendar(2022),
                     new Calendar(2021),
                     new Calendar(2020),
                     new Calendar(2018),

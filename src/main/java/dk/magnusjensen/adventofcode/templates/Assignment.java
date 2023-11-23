@@ -17,7 +17,7 @@ public abstract class Assignment {
 
     @FXML
     private TextArea input;
-    private String name;
+    private final String name;
     @FXML
     private Label outputLabel;
 
@@ -33,16 +33,16 @@ public abstract class Assignment {
         Node content = loadDefaultContent(this);
         setInputContent(input, this.getClass().getAnnotation(CalenderAssignment.class).calendarName(), Math.round(this.getClass().getAnnotation(CalenderAssignment.class).number() / 2f));
         return content;
-    };
+    }
 
-    protected Node loadContent(String fxml, Object controller) throws IOException {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+    protected Node loadContent(Object controller) throws IOException {
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("defaultContent" + ".fxml"));
         loader.setController(controller);
         return loader.load();
     }
 
-    protected Node loadDefaultContent (Assignment controller) throws IOException {
-        return loadContent("defaultContent", controller);
+    protected Node loadDefaultContent(Assignment controller) throws IOException {
+        return loadContent(controller);
     }
 
     protected void setInputContent(TextArea input, int calenderNumber, int day) throws IOException {

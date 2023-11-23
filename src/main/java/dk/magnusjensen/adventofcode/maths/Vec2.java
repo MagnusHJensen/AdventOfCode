@@ -2,8 +2,8 @@ package dk.magnusjensen.adventofcode.maths;
 
 public class Vec2 {
 
-	private int x;
-	private int y;
+	private final int x;
+	private final int y;
 
 	public Vec2(int x, int y) {
 		this.x = x;
@@ -20,9 +20,8 @@ public class Vec2 {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (obj instanceof Vec2) {
-			Vec2 instance = (Vec2) obj;
-			return instance.getX() == this.x && instance.getY() == this.y;
+		if (obj instanceof Vec2 instance) {
+            return instance.getX() == this.x && instance.getY() == this.y;
 		} else {
 			return false;
 		}

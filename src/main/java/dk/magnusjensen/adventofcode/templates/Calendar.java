@@ -26,8 +26,8 @@ import java.util.TreeMap;
 
 public class Calendar extends Tab implements Initializable {
 
-    private ObservableList<Assignment> assignments;
-    private int name;
+    private final ObservableList<Assignment> assignments;
+    private final int name;
 
     private CalenderAssignment currentAnnotation;
 
@@ -53,7 +53,7 @@ public class Calendar extends Tab implements Initializable {
 
         DecimalFormat df = new DecimalFormat("0");
         for (Class<?> c : classes) {
-            CalenderAssignment ca = (CalenderAssignment) c.getAnnotationsByType(CalenderAssignment.class)[0];
+            CalenderAssignment ca = c.getAnnotationsByType(CalenderAssignment.class)[0];
             if (ca.calendarName() == name) {
                 try {
                     float cnt = (float)Math.ceil((double)ca.number() * 0.5d);
